@@ -1,45 +1,98 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- remove the data-theme from html tag and comment below back in for site theme to match browser theme -->
-        <!-- <meta name="color-scheme" content="light dark"> -->
-        <link rel="stylesheet" href="pico.min.css">
-        <link rel ="icon" type="image/x-icon" href="/assets/favicon.ico">
-        <title>Ruben Boero</title>
-    </head>
-    <body>
-        <header class="container">
-            <hgroup>
-                <h1>Ruben Boero</h1>
-                <p>
-                    <a href="mailto:boeror2017@gmail.com">boeror2017@gmail.com</a> • 
-                    <a target="_blank" href="https://docs.google.com/document/d/1vT_eoCZJGenQ4_oWjg7YuSSrxY6vAHO7PRCe27uHYp8/edit?usp=sharing">Resume</a> • 
-                    <a target="_blank" href="https://github.com/rubenboero21">GitHub</a>
-                </p>
-                <p>This is the start of my site :)</p>
-            </hgroup>
-        </header>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <title>Ruben Boero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <header class="container">
-            <h3>About me</h3>
-            <p>I'm a technology/cybersecurity analyst at a bank.</p>
-            <p>More to come</p>
-        </header>
+  <main>
 
-        <header class="container">
-            <h3>Project highlights</h3>
-            <ul>
-                <li><a target="_blank" href="https://github.com/rubenboero21/cs-comps/tree/main">SSH client</a></li>
-                <ul>
-                    <li><a href="sshClient.html">SSH client project site</a></li>
-                </ul>
-                <li><a target="_blank" href="https://github.com/bernsteinb1/CS321_Final">Flappy Bird and Pong AI trained via neuroevolution</a></li>
-                <li><a target="_blank" href="https://github.com/Clean-Hands/p2p_client">Peer-to-peer file sharing application</a></li>
-                <li><a target="_blank" href="https://github.com/rubenboero21/link-ensusificinator">Link-ensusificinator</a></li>
-                <li>More to come!</li>
-            </ul>
-        </header>
-    </body>
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Software Engineer &amp; Security Analyst</span>
+        <h1>Ruben Boero<span class="cursor" aria-hidden="true">_</span></h1>
+        <p class="hero-sub">Technology and cybersecurity analyst at a bank. I spend my off-hours building things — mostly networked systems and tools that scratch my own itch.</p>
+        <nav class="hero-links">
+          <a href="mailto:boeror2017@gmail.com">boeror2017@gmail.com</a>
+          <a href="https://docs.google.com/document/d/1vT_eoCZJGenQ4_oWjg7YuSSrxY6vAHO7PRCe27uHYp8/edit?usp=sharing" target="_blank" rel="noopener">Résumé</a>
+          <a href="https://github.com/rubenboero21" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-label">About</h2>
+      <div class="section-body">
+        <p>I work in technology and cybersecurity at a bank, where I spend my time thinking about how systems fail and how to keep them from doing so. I have a background in computer science and a particular interest in networking, security protocols, and systems programming.</p>
+        <p>More to come.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-label">Projects</h2>
+      <div class="section-body">
+        <ul class="project-list">
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Networking / Security</span>
+            </div>
+            <div class="project-detail">
+              <a class="project-title" href="sshClient.html">SSH Client</a>
+              <p class="project-desc">A ground-up implementation of the SSH protocol in Python — including protocol version exchange, DH key exchange, and the connection layer. Built as a senior CS capstone.</p>
+              <a class="project-code" href="https://github.com/rubenboero21/cs-comps/tree/main" target="_blank" rel="noopener">View source →</a>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">AI / Machine Learning</span>
+            </div>
+            <div class="project-detail">
+              <a class="project-title" href="https://github.com/bernsteinb1/CS321_Final" target="_blank" rel="noopener">Flappy Bird &amp; Pong AI</a>
+              <p class="project-desc">Trained agents to play Flappy Bird and Pong using neuroevolution — neural networks shaped by evolutionary pressure rather than gradient descent.</p>
+              <a class="project-code" href="https://github.com/bernsteinb1/CS321_Final" target="_blank" rel="noopener">View source →</a>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Networking</span>
+            </div>
+            <div class="project-detail">
+              <a class="project-title" href="https://github.com/Clean-Hands/p2p_client" target="_blank" rel="noopener">Peer-to-Peer File Sharing</a>
+              <p class="project-desc">A P2P file sharing client that lets peers discover each other and exchange files without a central server.</p>
+              <a class="project-code" href="https://github.com/Clean-Hands/p2p_client" target="_blank" rel="noopener">View source →</a>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Tools</span>
+            </div>
+            <div class="project-detail">
+              <a class="project-title" href="https://github.com/rubenboero21/link-ensusificinator" target="_blank" rel="noopener">Link-ensusificinator</a>
+              <p class="project-desc">A small utility for link processing. The name is intentional.</p>
+              <a class="project-code" href="https://github.com/rubenboero21/link-ensusificinator" target="_blank" rel="noopener">View source →</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Ruben Boero &mdash; <a href="mailto:boeror2017@gmail.com">boeror2017@gmail.com</a></p>
+  </footer>
+
+</body>
 </html>
