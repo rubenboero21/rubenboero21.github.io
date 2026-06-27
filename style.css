@@ -4,16 +4,22 @@
   --text:        #1A1A1A;
   --text-muted:  #5A6270;
   --accent:      #2D7D78;
-  --accent-dim:  #1f5e5a;
+  --accent-dim:  #1F5E5A;
   --rule:        #DDDDD9;
   --mono:        'DM Mono', 'Fira Mono', monospace;
   --sans:        'Inter', system-ui, sans-serif;
 }
 
 /* ─── Reset ──────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { font-size: 16px; }
+html {
+  font-size: 16px;
+}
 
 body {
   background: var(--bg);
@@ -24,16 +30,23 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ─── Global Links ───────────────────────────────────────── */
 a {
   color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent);
+  transition:
+    color 0.15s ease,
+    text-decoration-color 0.15s ease;
 }
+
 a:hover {
   color: var(--accent-dim);
-  text-decoration-color: var(--accent-dim);
+  text-decoration-color: currentColor;
 }
+
 a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -45,15 +58,24 @@ body {
   padding-left: max(3rem, 10vw);
 }
 
-main, footer {
+main,
+footer {
   max-width: 760px;
   padding: 0 1.5rem;
 }
 
 @media (max-width: 600px) {
-  body { padding-left: 0; }
-  .hero { padding-top: 3rem; padding-bottom: 2.5rem; }
+  body {
+    padding-left: 0;
+  }
+
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+  }
 }
+
+/* ─── Hero ───────────────────────────────────────────────── */
 .hero {
   padding-top: 5rem;
   padding-bottom: 4rem;
@@ -71,11 +93,12 @@ main, footer {
 }
 
 .eyebrow a {
-  text-decoration: none;
-  color: var(--text-muted);
-}
-.eyebrow a:hover {
   color: var(--accent);
+  text-decoration: underline;
+}
+
+.eyebrow a:hover {
+  color: var(--accent-dim);
 }
 
 h1 {
@@ -96,12 +119,20 @@ h1 {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cursor { animation: none; opacity: 1; }
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .hero-sub {
@@ -120,19 +151,19 @@ h1 {
 }
 
 .hero-links a {
-  color: var(--text);
-  text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 1px;
-  transition: border-color 0.15s, color 0.15s;
-}
-.hero-links a:hover {
   color: var(--accent);
-  border-color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+  border: none;
+  padding-bottom: 0;
 }
 
-/* ─── Content sections ───────────────────────────────────── */
+.hero-links a:hover {
+  color: var(--accent-dim);
+}
+
+/* ─── Content Sections ───────────────────────────────────── */
 .content-section {
   padding: 3rem 0;
   border-bottom: 1px solid var(--rule);
@@ -152,9 +183,12 @@ h1 {
   color: var(--text);
   margin-bottom: 0.85rem;
 }
-.section-body p:last-child { margin-bottom: 0; }
 
-/* ─── Project list ───────────────────────────────────────── */
+.section-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Projects ───────────────────────────────────────────── */
 .project-list {
   list-style: none;
   display: flex;
@@ -177,17 +211,29 @@ h1 {
 }
 
 .project-title {
-  display: block;
+  display: inline-block;
+  width: fit-content;
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--text);
-  text-decoration: none;
+  font-weight: 600;
+  /* color: var(--text); */
+  color: var(--accent);
+  /* text-decoration: underline; */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
   margin-top: 0.1rem;
 }
-.project-title:hover {
-  color: var(--accent);
-  text-decoration: none;
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  align-items: flex-start; /* prevents links from stretching */
 }
+
+/* .project-title:hover {
+  color: var(--accent-dim);
+} */
 
 .project-desc {
   font-size: 0.92rem;
@@ -201,12 +247,9 @@ h1 {
   margin-top: 0.4rem;
   font-family: var(--mono);
   font-size: 0.78rem;
-  color: var(--accent);
-  text-decoration: none;
 }
-.project-code:hover { color: var(--accent-dim); text-decoration: underline; }
 
-/* ─── Contributor list ───────────────────────────────────── */
+/* ─── Contributors ───────────────────────────────────────── */
 .contributor-list {
   list-style: none;
   display: flex;
@@ -229,11 +272,23 @@ footer {
   font-size: 0.78rem;
   color: var(--text-muted);
 }
-footer a { color: var(--text-muted); }
-footer a:hover { color: var(--accent); }
+
+footer a {
+  color: var(--accent);
+}
+
+footer a:hover {
+  color: var(--accent-dim);
+}
 
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .content-section { padding: 2rem 0; }
-  .hero { padding-top: 3rem; padding-bottom: 2rem; }
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
 }
