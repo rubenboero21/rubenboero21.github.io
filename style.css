@@ -3,6 +3,7 @@
   --bg:          #F8F8F6;
   --text:        #1A1A1A;
   --text-muted:  #5A6270;
+  --text-darker: #3D4450;
   --accent:      #2D7D78;
   --accent-dim:  #1F5E5A;
   --rule:        #DDDDD9;
@@ -171,11 +172,12 @@ h1 {
 
 .section-label {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  /* color: var(--text-muted); */
+  color: var(--text-darker);
   margin-bottom: 1rem;
 }
 
