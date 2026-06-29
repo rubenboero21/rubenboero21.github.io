@@ -1,47 +1,83 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- remove the data-theme from html tag and comment below back in for site theme to match browser theme -->
-      <!-- <meta name="color-scheme" content="light dark"> -->
-      <link rel="stylesheet" href="pico.min.css">
-      <link rel ="icon" type="image/x-icon" href="/assets/favicon.ico">
-      <title>Ruben Boero</title>
-    </head>
-  <body>
-    <main class="container">
-    <a href="index.html">Back to main site</a>
-    <h1>Implementing an SSH Client</h1>
-    <p>SSH is a tool that allows secure, remote connection to another machine. It is primarily used to gain remote access to a terminal/shell. The SSH exchange is carried out on top of a TCP connection. The SSH exchange has 5 main sections: protocol version exchange, key exchange initialization, Diffie-Hellman (DH) key exchange, and connection protocol. The project description is outlined <a href="https://docs.google.com/document/d/e/2PACX-1vSouRo8KV3OQYULsrzRG4ekcRslUbjvLqcGHJjQ8peiBg_xVDK24utqCMxEoJRkYdpKWsjdgJuT5ZX9/pub" target="_blank">here</a> by Jeff Ondich.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <title>Ruben Boero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main {
+        /* 
+        I want the content to be larger on just this page, so overriding style.css main size. 
+        Change the scaling mulitplier, and the content will also grow by that much.
+        */
+      max-width: min(calc(760px * 1.3), 96vw);
+    }
+  </style>
+</head>
+<body>
 
-    <section>
-      <h2>Contributors</h2>
-      <ul>
-        <li><a href="https://github.com/liamkeane" target="_blank">Liam Keane</a></li>
-        <li><a href="https://github.com/rubenboero21" target="_blank">Ruben Boero</a></li>
-        <li>Advisor: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Jeff Ondich</a></li>
-      </ul>
+  <main>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow"><a href="index.html">Back to main site</a></span>
+        <h1>Implementing an SSH Client</h1>
+        <p class="hero-sub">SSH allows secure, remote connection to another machine — primarily to gain access to a remote terminal. The exchange runs on top of TCP and has five main phases: protocol version exchange, key exchange initialization, Diffie-Hellman key exchange, and the connection protocol. The full project brief by Jeff Ondich is <a href="https://docs.google.com/document/d/e/2PACX-1vSouRo8KV3OQYULsrzRG4ekcRslUbjvLqcGHJjQ8peiBg_xVDK24utqCMxEoJRkYdpKWsjdgJuT5ZX9/pub" target="_blank" rel="noopener">available here</a>.</p>
+      </div>
     </section>
 
-    <section> 
-      <h2>Learn about our project</h2>
-        <h4><a href="https://github.com/rubenboero21/cs-comps" target="_blank">Code repository</a></h4>
+    <section class="content-section">
+      <h2 class="section-label">Contributors</h2>
+      <div class="section-body">
+        <ul class="contributor-list">
+          <li><a href="https://github.com/liamkeane" target="_blank" rel="noopener">Liam Keane</a></li>
+          <li><a href="https://github.com/rubenboero21" target="_blank" rel="noopener">Ruben Boero</a></li>
+          <li class="contributor-advisor">Advisor: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener">Jeff Ondich</a></li>
+        </ul>
+      </div>
+    </section>
 
-        <h4>Project documentation</a></h4>
-        <embed src="sshClientSources/ProjectExplanation.pdf" width="100%" height="700vh" type="application/pdf">
-        <p></p> <!-- adding space after embedded pdf -->
+    <section class="content-section">
+      <h2 class="section-label">Code</h2>
+      <div class="section-body">
+        <a class="project-title" href="https://github.com/rubenboero21/cs-comps" target="_blank" rel="noopener">View repository</a>
+      </div>
+    </section>
 
-        <h4>Video Demonstration</h4>
-        <video controls="controls" width="100%" height="auto">
-          <source src="sshClientSources/sshClientVideoDemo.mp4" type="video/mp4"/>
+    <section class="content-section">
+      <h2 class="section-label">Documentation</h2>
+      <div class="section-body">
+        <embed src="sshClientSources/ProjectExplanation.pdf" width="100%" height="700px" type="application/pdf">
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-label">Demo</h2>
+      <div class="section-body">
+        <video controls width="100%" height="auto">
+          <source src="sshClientSources/sshClientVideoDemo.mp4" type="video/mp4">
         </video>
+      </div>
     </section>
 
-      <section>
-        <h2>Our poster</h2>
-        <img src="sshClientSources/RubenLiamSSHPoster.png" alt="RubenLiamSSHPoster"> 
-      </section>
-    </main>
-  </body>
+    <section class="content-section">
+      <h2 class="section-label">Poster</h2>
+      <div class="section-body">
+        <img src="sshClientSources/RubenLiamSSHPoster.png" alt="SSH Client project poster by Ruben Boero and Liam Keane" style="width:100%;height:auto;">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- <p>Ruben Boero</p> -->
+    <p><a href="#">Back to top</a></p> 
+  </footer>
+
+</body>
 </html>

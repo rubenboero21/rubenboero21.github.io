@@ -1,45 +1,105 @@
 <!doctype html>
-<html lang="en" data-theme="light">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- remove the data-theme from html tag and comment below back in for site theme to match browser theme -->
-        <!-- <meta name="color-scheme" content="light dark"> -->
-        <link rel="stylesheet" href="pico.min.css">
-        <link rel ="icon" type="image/x-icon" href="/assets/favicon.ico">
-        <title>Ruben Boero</title>
-    </head>
-    <body>
-        <header class="container">
-            <hgroup>
-                <h1>Ruben Boero</h1>
-                <p>
-                    <a href="mailto:boeror2017@gmail.com">boeror2017@gmail.com</a> • 
-                    <a target="_blank" href="https://docs.google.com/document/d/1vT_eoCZJGenQ4_oWjg7YuSSrxY6vAHO7PRCe27uHYp8/edit?usp=sharing">Resume</a> • 
-                    <a target="_blank" href="https://github.com/rubenboero21">GitHub</a>
-                </p>
-                <p>This is the start of my site :)</p>
-            </hgroup>
-        </header>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <title>Ruben Boero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <header class="container">
-            <h3>About me</h3>
-            <p>I'm a technology/cybersecurity analyst at a bank.</p>
-            <p>More to come</p>
-        </header>
+  <main>
 
-        <header class="container">
-            <h3>Project highlights</h3>
-            <ul>
-                <li><a target="_blank" href="https://github.com/rubenboero21/cs-comps/tree/main">SSH client</a></li>
-                <ul>
-                    <li><a href="sshClient.html">SSH client project site</a></li>
-                </ul>
-                <li><a target="_blank" href="https://github.com/bernsteinb1/CS321_Final">Flappy Bird and Pong AI trained via neuroevolution</a></li>
-                <li><a target="_blank" href="https://github.com/Clean-Hands/p2p_client">Peer-to-peer file sharing application</a></li>
-                <li><a target="_blank" href="https://github.com/rubenboero21/link-ensusificinator">Link-ensusificinator</a></li>
-                <li>More to come!</li>
-            </ul>
-        </header>
-    </body>
+    <section class="hero">
+      <span class="eyebrow">Software Engineer &amp; Security Analyst</span>
+      <!-- <h1>Ruben Boero<span class="cursor" aria-hidden="true">_</span></h1> -->
+      <h1>Ruben Boero</h1>
+      <p class="hero-sub">I currently work as a technology analyst at Citibank. I have a B.A. in computer science and a particular interest in networking, security, and systems programming.</p>
+      <nav class="hero-links">
+        <a href="mailto:boeror2017@gmail.com">boeror2017@gmail.com</a>
+        <p>•</p>
+        <a href="https://docs.google.com/document/d/1vT_eoCZJGenQ4_oWjg7YuSSrxY6vAHO7PRCe27uHYp8/edit?usp=sharing" target="_blank" rel="noopener">Résumé</a>
+        <p>•</p>
+        <a href="https://github.com/rubenboero21" target="_blank" rel="noopener">GitHub</a>
+        <p>•</p>
+        <a href="https://www.linkedin.com/in/ruben-boero/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-label">Projects</h2>
+      <div class="section-body">
+        <ul class="project-list">
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Networking / Security</span>
+            </div>
+            <div class="project-detail">
+              <p class="project-title">SSH Client</p>
+              <p class="project-desc">An implementation of the SSH protocol in C. See the project site link below for in depth documentation and explanation of how an SSH client functions.</p>
+              <div class="project-links">
+                <a class="project-code" href="sshClient.html">
+                  SSH client project site
+                </a>
+
+                <a class="project-code"
+                  href="https://github.com/rubenboero21/cs-comps/tree/main"
+                  target="_blank"
+                  rel="noopener">
+                  Source code
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">AI / Machine Learning</span>
+            </div>
+            <div class="project-detail">
+              <p class="project-title">Flappy Bird &amp; Pong AI</p>
+              <p class="project-desc">Wrote and trained a neural network (in Python) to play Flappy Bird and Pong using neuroevolution.</p>
+              <a class="project-code" href="https://github.com/bernsteinb1/CS321_Final" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Networking</span>
+            </div>
+            <div class="project-detail">
+              <p class="project-title">Peer-to-Peer File Sharing Client</p>
+              <p class="project-desc">A P2P file sharing client that lets peers discover each other and exchange files via a GUI or CLI. Written in Rust.</p>
+              <a class="project-code" href="https://github.com/Clean-Hands/p2p_client" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-meta">
+              <span class="project-tag">Tools / Unserious</span>
+            </div>
+            <div class="project-detail">
+              <p class="project-title">Link-ensusificinator</p>
+              <p class="project-desc">An unserious Python app that takes a URL as input and outputs a suspicious URL that redirects to the original input. This project was inspired from all the suspicious-looking links I saw while working as SOC Email Threat analyst. The project also served as practice/learning about networking and Docker.</p>
+              <a class="project-code" href="https://github.com/rubenboero21/link-ensusificinator" target="_blank" rel="noopener">Source code</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- <p>Ruben Boero</p> -->
+    <p><a href="#">Back to top</a></p> 
+  </footer>
+
+</body>
 </html>
